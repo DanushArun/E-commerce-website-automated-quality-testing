@@ -49,7 +49,3 @@ After running the tests, a detailed log file (test_execution.log) will be genera
 
 Contributing <br>
 Feel free to submit a pull request if you'd like to improve the scripts or add new features.
-<br> <br>
-License <br>
-This project is licensed under the MIT License - see the LICENSE file for details.
-
