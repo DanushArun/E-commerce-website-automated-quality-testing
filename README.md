@@ -13,43 +13,43 @@ Error Handling for Non-existent Elements: Ensures proper handling and reporting 
 Prerequisites: <br>
 Python 3.x <br>
 Chrome browser <br>
-ChromeDriver (handled automatically using webdriver-manager) <br>
+ChromeDriver (handled automatically using webdriver-manager) <br> <br>
 
 Dependencies: <br>
 
 Install the required dependencies by running: <br>
-!pip install selenium webdriver-manager <br>
+!pip install selenium webdriver-manager <br> <br>
 
 Installation <br>
 Clone this repository: <br>
 git clone https://github.com/DanushArun/E-commerce-website-automated-quality-testing.git 
-<br>
+<br> <br>
 Navigate to the project directory: <br>
 cd E-commerce-website-automated-quality-testing
-<br>
+<br> <br>
 Install dependencies: <br>
 pip install -r requirements.txt
-<br>
+<br> <br>
 Setting up Login Credentials <br>
 Note: The test for valid login requires valid credentials to work. Create a file named credentials.json in the root directory of the repository with the following structure: 
-<br>
+<br> <br>
 { <br>
   "email": "your-email@example.com", <br>
   "password": "your-password" <br>
-} <br>
-Make sure to enter a valid username and password for the Nike website in this file before running the tests. <br>
+} <br> <br>
+Make sure to enter a valid username and password for the Nike website in this file before running the tests. <br> <br>
 
 Running the Tests <br>
 To execute the automation tests, run the following command: <br>
-python ecommerce_automation.py <br>
+python ecommerce_automation.py <br> <br>
 
 Test Report <br>
 
-After running the tests, a detailed log file (test_execution.log) will be generated in the root directory with a summary of the executed tests, including successes and any failures. <br>
+After running the tests, a detailed log file (test_execution.log) will be generated in the root directory with a summary of the executed tests, including successes and any failures. <br> <br>
 
 Contributing <br>
 Feel free to submit a pull request if you'd like to improve the scripts or add new features.
-<br>
+<br> <br>
 License <br>
 This project is licensed under the MIT License - see the LICENSE file for details.
 
