@@ -73,7 +73,7 @@ def test_login():
         driver.get("https://www.nike.com/in/login")
         
         logging.info("Testing valid login...")
-        login(driver, "danusharun999@gmail.com", "Ironimac916.")  # Please upload a valid login credential before running the test
+        login(driver, <Enter username>, <Enter Password>)  # Please upload a valid login credential before running the test
         WebDriverWait(driver, 60).until(EC.presence_of_element_located((By.CSS_SELECTOR, "a[data-qa='profile-name']")))
         logging.info("Valid login successful.")
     except TimeoutException as e:
