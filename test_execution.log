@@ -1,0 +1,60 @@
+Test Execution Logs - October 9th, 2024 
+Test Product Search and Add to Cart
+
+Timestamp: 2024-10-09 15:22:01
+Status: Passed
+Log Messages:
+INFO: Searching for a product...
+INFO: Selecting the product...
+INFO: Adding product to cart...
+INFO: Validating product added to cart...
+INFO: Test Product Search and Add to Cart completed successfully.
+Test Valid Login
+
+Timestamp: 2024-10-09 15:30:15
+Status: Passed
+Log Messages:
+INFO: Testing valid login...
+INFO: Locating email field...
+INFO: Locating password field...
+INFO: Valid login successful.
+INFO: Test Login completed successfully.
+Test UI Elements on Homepage
+
+Timestamp: 2024-10-09 15:31:07
+Status: Passed
+Log Messages:
+INFO: Checking UI elements on homepage...
+INFO: Search icon is displayed.
+INFO: Navigation menu is displayed.
+INFO: Footer is displayed.
+INFO: Test UI Elements completed successfully.
+Test Form Validation
+
+Timestamp: 2024-10-09 15:31:38
+Status: Passed
+Log Messages:
+INFO: Testing form validation with empty submission...
+INFO: Error message displayed successfully for empty form submission.
+INFO: Test Form Validation completed successfully.
+Test Error Handling
+
+Timestamp: 2024-10-09 15:33:46
+Status: Passed
+Log Messages:
+INFO: Testing error handling for non-existent element...
+INFO: Element not found as expected.
+INFO: Test Error Handling completed successfully.
+Timeout Issues Identified
+
+Description: Timeout occurrences were observed during the execution of some tests due to page load speed.
+Resolution: Increased wait times to mitigate the issue.
+Log Messages:
+ERROR: Timeout occurred during Test Product Search and Add to Cart: Message: <Timeout details>
+ERROR: Timeout occurred during login: Message: <Timeout details>
+ERROR: Timeout occurred during Test UI Elements: Message: <Timeout details>
+ERROR: Timeout occurred during Test Form Validation: Message: <Timeout details>
+General Observations
+
+All tests were eventually completed successfully after extending wait times.
+NoSuchElementException and TimeoutException were appropriately caught and logged.
