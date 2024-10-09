@@ -34,7 +34,7 @@ Setting up Login Credentials
 Note: The test for valid login requires valid credentials to work. Create a file named credentials.json in the root directory of the repository with the following structure:
 
 json
-Copy code
+
 {
   "email": "your-email@example.com",
   "password": "your-password"
