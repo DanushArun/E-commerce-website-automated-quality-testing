@@ -1,51 +1,44 @@
-# E-commerce-website-automated-quality-testing
+# Nike Website Automation Experiment
 
-Description <br>
-This repository contains automation scripts for testing various functionalities of an e-commerce website, specifically for Nike's India site. The scripts are built using Python and Selenium, and aim to validate essential e-commerce features such as product search, adding items to the cart, login functionality, UI elements, form validation, and error handling.
+A Selenium script exploring a live e-commerce journey on Nike India: navigation, product
+selection, cart interactions and login-related flows.
 
-Features Tested <br>
-Product Search and Add to Cart: Validates the ability to search for products and add them to the shopping cart.
-Valid Login Functionality: Tests login using valid credentials.
-Homepage UI Elements: Checks the presence and visibility of key UI elements.
-Form Validation: Validates that required fields trigger appropriate error messages.
-Error Handling for Non-existent Elements: Ensures proper handling and reporting when an element is not found.
+## Current state
 
-Prerequisites: <br>
-Python 3.x <br>
-Chrome browser <br>
-ChromeDriver (handled automatically using webdriver-manager) <br> <br>
+[Automation_code.py](Automation_code.py) contains the browser automation.
+It is not executable as committed: the login call contains literal `<Enter username>` and
+`<Enter Password>` placeholders, which are invalid Python syntax.
 
-Dependencies: <br>
+[test_execution.log](test_execution.log) is a saved execution log. It does not prove that the
+current committed script passes, and several handlers log failures without propagating them.
+The final success message can therefore appear after an earlier operation failed.
 
-Install the required dependencies by running: <br>
-!pip install selenium webdriver-manager <br> <br>
+## Dependencies
 
-Installation <br>
-Clone this repository: <br>
-git clone https://github.com/DanushArun/E-commerce-website-automated-quality-testing.git 
-<br> <br>
-Navigate to the project directory: <br>
+The script imports Selenium, Requests and webdriver-manager and expects Chrome.
+There is no requirements file or dependency lockfile.
+
+```bash
+git clone https://github.com/DanushArun/E-commerce-website-automated-quality-testing.git
 cd E-commerce-website-automated-quality-testing
-<br> <br>
-Install dependencies: <br>
-pip install -r requirements.txt
-<br> <br>
-Setting up Login Credentials <br>
-Note: The test for valid login requires valid credentials to work. Create a file named credentials.json in the root directory of the repository with the following structure: 
-<br> <br>
-{ <br>
-  "email": "your-email@example.com", <br>
-  "password": "your-password" <br>
-} <br> <br>
-Make sure to enter a valid username and password for the Nike website in this file before running the tests. <br> <br>
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install selenium requests webdriver-manager
+python -m py_compile Automation_code.py
+```
 
-Running the Tests <br>
-To execute the automation tests, run the following command: <br>
-python ecommerce_automation.py <br> <br>
+The final command currently reports a syntax error at the placeholder login call.
+Resolve that source error before attempting a browser run. The script does not load the
+`credentials.json` file described by earlier documentation.
 
-Test Report <br>
+## Execution boundary
 
-After running the tests, a detailed log file (test_execution.log) will be generated in the root directory with a summary of the executed tests, including successes and any failures. <br> <br>
+This script targets an external production website and performs cart and login interactions.
+Run only with an authorized test account and an appropriate testing environment.
+Selectors, redirects and anti-automation behavior can change independently of this repository.
 
-Contributing <br>
-Feel free to submit a pull request if you'd like to improve the scripts or add new features.
+## Verification
+
+The source and saved log were reviewed. Syntax validation identified the committed blocker.
+No live browser journey was executed for this documentation update.
+There is no isolated test fixture, automated assertion suite or verified pass rate.
